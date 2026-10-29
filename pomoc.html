@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pomoc — MiniStrony</title>
+<meta name="description" content="Centrum pomocy: częste pytania i darmowy asystent AI.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner">
+  <a href="index.html" class="brand"><span class="dot"></span>MiniStrony</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Start</a>
+    <a href="cennik.html">Cennik</a>
+    <a href="opinie.html">Opinie</a>
+    <a href="pomoc.html" class="active">Pomoc</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="rezerwacja.html" class="nav-cta">Umów rozmowę</a>
+  </div>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+</div></nav>
+
+<header class="hero" style="padding:72px 0 32px"><div class="container">
+  <span class="eyebrow">Centrum pomocy</span>
+  <h1>Jak mogę <span>Ci pomóc?</span></h1>
+  <p>Odpowiedzi na najczęstsze pytania oraz darmowy asystent AI, który rozwiąże proste problemy od ręki.</p>
+</div></header>
+
+<section class="block" style="padding-top:30px"><div class="container">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="openTab('tabFaq',this)">❓ Częste pytania</button>
+    <button class="tab-btn" onclick="openTab('tabAi',this)">🤖 Darmowy asystent AI</button>
+  </div>
+
+  <div id="tabFaq" class="tab-panel active"><div style="max-width:720px;margin:0 auto">
+    <div class="faq-item"><div class="faq-q">Ile kosztuje strona? <span class="arr">▾</span></div><div class="faq-a"><p>Mały projekt od 150 zł, średni od 250 zł, złożony od 600 zł wzwyż. Szczegóły w zakładce Cennik.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Kto płaci za hosting i domenę? <span class="arr">▾</span></div><div class="faq-a"><p>Hosting i domenę opłaca bezpośrednio klient (zwykle 50-150 zł rocznie). Pomagam wszystko skonfigurować.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Jak długo trwa realizacja? <span class="arr">▾</span></div><div class="faq-a"><p>Mały projekt 2-4 dni, średni 5-8 dni, złożony 2-3 tygodnie. Termin ustalamy przed startem.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Jak umówić rozmowę? <span class="arr">▾</span></div><div class="faq-a"><p>Wejdź w zakładkę „Umów rozmowę”, wybierz termin w kalendarzu, podaj imię, nazwisko i e-mail, a następnie potwierdź rezerwację linkiem z wiadomości e-mail.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Czy strona będzie działać na telefonie? <span class="arr">▾</span></div><div class="faq-a"><p>Tak, każda strona jest w pełni responsywna.</p></div></div>
+    <div class="faq-item"><div class="faq-q">Jak wygląda płatność? <span class="arr">▾</span></div><div class="faq-a"><p>Zazwyczaj 50% zaliczki na start i 50% po oddaniu projektu. Szczegóły ustalamy indywidualnie.</p></div></div>
+  </div></div>
+
+  <div id="tabAi" class="tab-panel">
+    <div class="chat">
+      <div class="chat-head">
+        <div class="avatar">🤖</div>
+        <div><b>Asystent MiniStrony</b><span>● online · darmowy</span></div>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="msg bot">Cześć! Jestem darmowym asystentem AI. Pomogę Ci szybko rozwiązać proste pytania o moje usługi. O co chcesz zapytać?</div>
+      </div>
+      <div class="chat-suggest">
+        <button onclick="sendMsg('Ile kosztuje strona?')">Ile kosztuje strona?</button>
+        <button onclick="sendMsg('Kto płaci za hosting i domenę?')">Hosting i domena?</button>
+        <button onclick="sendMsg('Jak długo trwa realizacja?')">Czas realizacji?</button>
+        <button onclick="sendMsg('Jak się skontaktować?')">Kontakt?</button>
+      </div>
+      <div class="chat-input">
+        <input id="chatInput" type="text" placeholder="Napisz pytanie..." onkeydown="chatKey(event)" autocomplete="off">
+        <button onclick="sendMsg()">Wyślij</button>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:.85rem;margin-top:16px">Asystent działa lokalnie w Twojej przeglądarce. W trudniejszych sprawach napisz na mark11dm2022@gmail.com.</p>
+  </div>
+</div></section>
+
+<footer><div class="container foot-inner">
+  <a href="index.html" class="brand"><span class="dot"></span>MiniStrony</a>
+  <span>© 2026 MiniStrony · mark11dm2022@gmail.com · <a href="admin.html" style="color:var(--muted)">Panel administratora</a></span>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

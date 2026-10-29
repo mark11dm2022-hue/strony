@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Umów rozmowę — MiniStrony</title>
+<meta name="description" content="Zarezerwuj bezpłatną rozmowę online. Wybierz termin w kalendarzu i potwierdź e-mailem.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner">
+  <a href="index.html" class="brand"><span class="dot"></span>MiniStrony</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Start</a>
+    <a href="cennik.html">Cennik</a>
+    <a href="opinie.html">Opinie</a>
+    <a href="pomoc.html">Pomoc</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="rezerwacja.html" class="nav-cta active">Umów rozmowę</a>
+  </div>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+</div></nav>
+
+<header class="hero" style="padding:72px 0 24px"><div class="container">
+  <span class="eyebrow">Rezerwacja rozmowy</span>
+  <h1>Umów <span>bezpłatną rozmowę</span></h1>
+  <p>Wybierz dogodny termin, podaj swoje dane i potwierdź rezerwację linkiem, który wyślę na Twój e-mail.</p>
+</div></header>
+
+<section class="block" style="padding-top:20px"><div class="container">
+  <div id="confirmBanner"></div>
+  <div class="booking-wrap">
+
+    <div class="cal">
+      <div class="cal-head">
+        <button type="button" id="prevM" aria-label="Poprzedni miesiąc">‹</button>
+        <b id="calTitle">—</b>
+        <button type="button" id="nextM" aria-label="Następny miesiąc">›</button>
+      </div>
+      <div class="cal-grid" id="calDows"></div>
+      <div class="cal-grid" id="calDays" style="margin-top:6px"></div>
+      <p style="color:var(--muted);font-size:.82rem;margin-top:14px">Rozmowy odbywają się od poniedziałku do piątku, 9:00–17:00.</p>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-bottom:6px">Szczegóły rezerwacji</h3>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:16px">Wybrany termin: <b id="pickInfo" style="color:var(--text)">—</b></p>
+
+      <div id="slotsBox">
+        <p class="slots-empty">Najpierw wybierz dzień w kalendarzu.</p>
+      </div>
+
+      <form id="bookForm" style="margin-top:18px">
+        <div id="bookMsg"></div>
+        <div class="field"><label for="bFirst">Imię *</label><input id="bFirst" type="text" required maxlength="60" placeholder="Jan"></div>
+        <div class="field"><label for="bLast">Nazwisko *</label><input id="bLast" type="text" required maxlength="60" placeholder="Kowalski"></div>
+        <div class="field"><label for="bEmail">E-mail (do potwierdzenia) *</label><input id="bEmail" type="email" required maxlength="120" placeholder="twoj@email.pl"></div>
+        <div class="field"><label for="bTopic">Temat rozmowy</label><input id="bTopic" type="text" maxlength="80" placeholder="np. nowa strona dla restauracji"></div>
+        <div class="field"><label for="bMsg">Dodatkowe informacje</label><textarea id="bMsg" maxlength="1000" placeholder="Opcjonalnie — opisz krótko swój pomysł"></textarea></div>
+        <button type="submit" class="btn btn-primary" id="bookBtn" style="width:100%;justify-content:center">Rezerwuję — wyślij potwierdzenie →</button>
+        <p style="color:var(--muted);font-size:.8rem;margin-top:12px;text-align:center">Po kliknięciu wyślemy link potwierdzający na Twój e-mail. Rezerwacja jest aktywna po potwierdzeniu.</p>
+      </form>
+    </div>
+
+  </div>
+</div></section>
+
+<footer><div class="container foot-inner">
+  <a href="index.html" class="brand"><span class="dot"></span>MiniStrony</a>
+  <span>© 2026 MiniStrony · mark11dm2022@gmail.com · <a href="admin.html" style="color:var(--muted)">Panel administratora</a></span>
+</div></footer>
+<script src="assets/app.js"></script>
+<script src="assets/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opinie — MiniStrony</title>
+<meta name="description" content="Opinie klientów o moich usługach. Zostaw własną recenzję.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner">
+  <a href="index.html" class="brand"><span class="dot"></span>MiniStrony</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Start</a>
+    <a href="cennik.html">Cennik</a>
+    <a href="opinie.html" class="active">Opinie</a>
+    <a href="pomoc.html">Pomoc</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="rezerwacja.html" class="nav-cta">Umów rozmowę</a>
+  </div>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+</div></nav>
+
+<header class="hero" style="padding:72px 0 32px"><div class="container">
+  <span class="eyebrow">Opinie klientów</span>
+  <h1>Co mówią <span>moi klienci</span></h1>
+  <p>Zaufanie buduje się efektami. Zobacz opinie osób, dla których stworzyłem stronę — i dodaj własną.</p>
+</div></header>
+
+<section class="block" style="padding-top:20px"><div class="container">
+  <div id="reviewsList" class="reviews-grid">
+    <p style="color:var(--muted)">Ładowanie opinii…</p>
+  </div>
+</div></section>
+
+<section class="block"><div class="container">
+  <div class="section-head"><h2>Zostaw opinię</h2><p>Pracowaliśmy razem? Będę wdzięczny za kilka słów. Opinia pojawi się po mojej akceptacji.</p></div>
+  <form id="reviewForm" class="card" style="max-width:620px;margin:0 auto">
+    <div id="reviewMsg"></div>
+    <div class="field"><label for="rName">Imię</label><input id="rName" type="text" required maxlength="60" placeholder="Jan"></div>
+    <div class="field"><label for="rCompany">Firma (opcjonalnie)</label><input id="rCompany" type="text" maxlength="80" placeholder="Kawiarnia Przy Rynku"></div>
+    <div class="field"><label>Ocena</label><br>
+      <span class="star-input">
+        <input type="radio" name="rating" id="s5" value="5" checked><label for="s5">★</label>
+        <input type="radio" name="rating" id="s4" value="4"><label for="s4">★</label>
+        <input type="radio" name="rating" id="s3" value="3"><label for="s3">★</label>
+        <input type="radio" name="rating" id="s2" value="2"><label for="s2">★</label>
+        <input type="radio" name="rating" id="s1" value="1"><label for="s1">★</label>
+      </span>
+    </div>
+    <div class="field"><label for="rText">Twoja opinia</label><textarea id="rText" required maxlength="600" placeholder="Jak przebiegła współpraca?"></textarea></div>
+    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Wyślij opinię →</button>
+  </form>
+</div></section>
+
+<footer><div class="container foot-inner">
+  <a href="index.html" class="brand"><span class="dot"></span>MiniStrony</a>
+  <span>© 2026 MiniStrony · mark11dm2022@gmail.com · <a href="admin.html" style="color:var(--muted)">Panel administratora</a></span>
+</div></footer>
+<script src="assets/app.js"></script>
+<script src="assets/reviews.js"></script>
+</body>
+</html>

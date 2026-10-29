@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kontakt — MiniStrony</title>
+<meta name="description" content="Skontaktuj się ze mną — bezpłatna wycena Twojej strony.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner">
+  <a href="index.html" class="brand"><span class="dot"></span>MiniStrony</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Start</a>
+    <a href="cennik.html">Cennik</a>
+    <a href="opinie.html">Opinie</a>
+    <a href="pomoc.html">Pomoc</a>
+    <a href="kontakt.html" class="active">Kontakt</a>
+    <a href="rezerwacja.html" class="nav-cta">Umów rozmowę</a>
+  </div>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+</div></nav>
+
+<header class="hero" style="padding:72px 0 32px"><div class="container">
+  <span class="eyebrow">Kontakt</span>
+  <h1>Porozmawiajmy o <span>Twojej stronie</span></h1>
+  <p>Napisz do mnie, a przygotuję bezpłatną wycenę. Odpowiadam zwykle tego samego dnia.</p>
+</div></header>
+
+<section class="block" style="padding-top:30px"><div class="container">
+  <div class="contact-wrap">
+    <form class="card" onsubmit="return sendForm(event)">
+      <div class="field"><label for="fName">Imię / nazwa firmy</label><input id="fName" type="text" required placeholder="Jan Kowalski"></div>
+      <div class="field"><label for="fEmail">Twój e-mail</label><input id="fEmail" type="email" required placeholder="twoj@email.pl"></div>
+      <div class="field"><label for="fMsg">Opisz swój projekt</label><textarea id="fMsg" required placeholder="Jakiej strony potrzebujesz?"></textarea></div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Wyślij wiadomość →</button>
+      <p style="color:var(--muted);font-size:.82rem;margin-top:12px;text-align:center">Formularz otworzy Twój program pocztowy z gotową wiadomością.</p>
+    </form>
+    <div class="contact-info">
+      <div class="info-row"><div class="ic">✉️</div><div><b>E-mail</b><span>mark11dm2022@gmail.com</span></div></div>
+      <div class="info-row"><div class="ic">📅</div><div><b>Rozmowa online</b><span>Zarezerwuj dogodny termin w zakładce „Umów rozmowę”</span></div></div>
+      <div class="info-row"><div class="ic">⏱️</div><div><b>Czas odpowiedzi</b><span>Zwykle tego samego dnia</span></div></div>
+      <div class="info-row"><div class="ic">🤖</div><div><b>Szybka pomoc</b><span>Darmowy asystent AI w zakładce Pomoc</span></div></div>
+      <a href="rezerwacja.html" class="btn btn-primary" style="margin-top:24px;width:100%;justify-content:center">Umów bezpłatną rozmowę</a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="container foot-inner">
+  <a href="index.html" class="brand"><span class="dot"></span>MiniStrony</a>
+  <span>© 2026 MiniStrony · mark11dm2022@gmail.com · <a href="admin.html" style="color:var(--muted)">Panel administratora</a></span>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panel administratora — MiniStrony</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner">
+  <a href="index.html" class="brand"><span class="dot"></span>MiniStrony</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Start</a>
+    <a href="rezerwacja.html">Umów rozmowę</a>
+    <a href="#" id="logoutLink" style="display:none" onclick="adminLogout();return false;">Wyloguj</a>
+  </div>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+</div></nav>
+
+<section class="block"><div class="container">
+
+  <!-- LOGOWANIE -->
+  <div id="loginView" class="admin-login">
+    <div class="section-head" style="margin-bottom:24px"><h2>Panel administratora</h2><p>Zaloguj się swoim adresem e-mail i hasłem.</p></div>
+    <form id="loginForm" class="card">
+      <div id="loginMsg"></div>
+      <div class="field"><label for="aEmail">E-mail administratora</label><input id="aEmail" type="email" required placeholder="mark11dm2022@gmail.com"></div>
+      <div class="field"><label for="aPass">Hasło</label><input id="aPass" type="password" required placeholder="••••••••"></div>
+      <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Zaloguj się</button>
+    </form>
+  </div>
+
+  <!-- PANEL -->
+  <div id="dashView" style="display:none">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:8px">
+      <h2 style="font-size:1.8rem;font-weight:800">Panel administratora</h2>
+      <span style="color:var(--muted);font-size:.9rem">Zalogowano: <b id="adminEmail" style="color:var(--text)"></b></span>
+    </div>
+    <div class="admin-tabs">
+      <button class="tab-btn active" onclick="openTab('tabBook',this)">📅 Rezerwacje</button>
+      <button class="tab-btn" onclick="openTab('tabRev',this)">⭐ Opinie</button>
+    </div>
+
+    <div id="tabBook" class="tab-panel active">
+      <div class="card" style="padding:0">
+        <div class="scroll-x">
+          <table class="table"><thead><tr>
+            <th>Data</th><th>Godz.</th><th>Klient</th><th>E-mail</th><th>Temat</th><th>Status</th><th>Akcje</th>
+          </tr></thead><tbody id="bookBody"><tr><td colspan="7" style="padding:20px;color:var(--muted)">Ładowanie…</td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div id="tabRev" class="tab-panel">
+      <div class="card" style="padding:0">
+        <div class="scroll-x">
+          <table class="table"><thead><tr>
+            <th>Ocena</th><th>Autor</th><th>Treść</th><th>Status</th><th>Akcje</th>
+          </tr></thead><tbody id="revBody"><tr><td colspan="5" style="padding:20px;color:var(--muted)">Ładowanie…</td></tr></tbody></table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div></section>
+
+<script src="assets/app.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>

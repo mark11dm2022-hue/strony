@@ -1,0 +1,16 @@
+{
+  "name": "mini-strony-pro",
+  "version": "1.0.0",
+  "description": "MiniStrony PRO — strona oferty z rezerwacją rozmów, opiniami i panelem administratora",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14"
+  }
+}
